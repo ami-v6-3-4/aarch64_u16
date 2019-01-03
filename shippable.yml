@@ -10,7 +10,7 @@ runtime:
 build:
   pre_ci_boot:
     image_name: drydock/aarch64_u16
-    image_tag: master
+    image_tag: v6.3.4
     pull: true
     
   ci:
@@ -29,10 +29,8 @@ build:
     - jq --version
     - kubectl version --client
     - docker --version
-   # - EXPECTED_DOCKER_VERSION="18.03.1-ce"
-   # - |
-   #   [ $(docker version --format {{.Server.Version}}) == "$EXPECTED_DOCKER_VERSION" ]
-    
+    - docker pull shippabledocker/sample_node_pvt:ecr
+   
 integrations:
     
   hub:
