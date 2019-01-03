@@ -14,21 +14,21 @@ build:
     pull: true
     
   ci:
-    - python -V
-    - docker ps
-    - docker images
+    - python -V    
     - node --version
     - javac -version
     - source /usr/local/rvm/scripts/rvm
     - ruby --version
-    - gcloud version
-    - eb --version
-    - aws --version
-  #  - az --version
-    - packer --version
+    - gcloud version #160.0.0
+    - eb --version #3.9.0
+    - aws --version #1.11.91
+    - az --version #2.0.0
+    - packer.io --version #1.2.0
     - jq --version
-    - kubectl version --client
+    - kubectl version --client #1.5.1
     - docker --version
+    - docker ps
+    - docker images
     - docker pull shippabledocker/sample_node_pvt:ecr
    
 integrations:
